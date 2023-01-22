@@ -1,0 +1,1 @@
+﻿SELECT naimen FROM USLUGI WHERE stoim BETWEEN 2500 and 4000

@@ -1,0 +1,22 @@
+﻿1.Услуги стоимость от 2500 до 4000
+SELECT naimen FROM USLUGI WHERE stoim BETWEEN 2500 and 4000 
+2.Выбрать все заказ-наряды до определенной даты
+SELECT * FROM REMONT WHERE data < '2023-20-01';
+3.Выбрать все авто марки Subaru
+SELECT * FROM AVTO WHERE marka LIKE 'Subaru%';
+4.Выбрать все авто с годом выпуска 2006 и 2009.
+SELECT * FROM AVTO WHERE god = 2009 or god = 2014;
+5.Выбрать данные о заказ-нарядах, выполненных мастером с фамилией «Олейников» 
+SELECT * FROM REMONT WHERE n_mast LIKE '%2%';
+6.Выбрать все автомобили, для которых выполнялся ремонт после нового года.
+
+7.Какова общая сумма выполненных ремонтов.
+SELECT SUM(sum) FROM REMONT;
+8.Каковы минимальная и максимальная стоимость оказываемых услуг.
+SELECT MAX(sum), MIN(sum) FROM REMONT;
+9.Сколько всего разных марок автомобилей получали услуги.
+SELECT COUNT(n_avto) FROM REMONT;
+10.Выбрать суммарную стоимость всех ремонтных работ для каждого авто.
+SELECT n_avto, SUM(sum) FROM REMONT GROUP BY n_avto;
+11.Для каждого авто выбрать среднюю стоимость ремонта, если ремонтов было больше одного. Упорядочить записи по возрастанию.
+SELECT n_avto, AVG (sum) FROM REMONT GROUP BY n_avto HAVING COUNT (*)>1;
