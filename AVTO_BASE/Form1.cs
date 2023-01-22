@@ -56,5 +56,12 @@ namespace AVTO_BASE
 
             f5.ShowDialog();
         }
+
+        private void тестToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form7 f6 = new Form7();
+
+            f6.ShowDialog();
+        }
     }
 }
